@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Swift_Widget" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,77 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHU-dG-c03">
+                                <rect key="frame" x="219" y="251" width="163" height="30.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30.5" id="kWe-Xe-KZc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="ZOG-IS-xzT"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7H-rl-Qyn">
+                                <rect key="frame" x="266" y="318" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="y4e-AQ-Q5k"/>
+                                </constraints>
+                                <state key="normal" title="Increment">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VeM-e9-8Xo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcF-Tl-JNa">
+                                <rect key="frame" x="218.5" y="289" width="163" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="Yez-zJ-m4d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAn-Hi-DAC">
+                                <rect key="frame" x="219" y="222" width="163" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="3h7-i3-H9V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="J7H-rl-Qyn" secondAttribute="bottom" constant="252" id="4WQ-aj-ZSe"/>
+                            <constraint firstItem="VHU-dG-c03" firstAttribute="width" secondItem="sAn-Hi-DAC" secondAttribute="width" id="F1e-bX-L3G"/>
+                            <constraint firstItem="VHU-dG-c03" firstAttribute="top" secondItem="sAn-Hi-DAC" secondAttribute="bottom" constant="8" id="QKE-AN-gnW"/>
+                            <constraint firstItem="VHU-dG-c03" firstAttribute="leading" secondItem="sAn-Hi-DAC" secondAttribute="leading" id="RLH-dh-95k"/>
+                            <constraint firstItem="PcF-Tl-JNa" firstAttribute="width" secondItem="VHU-dG-c03" secondAttribute="width" id="awo-gt-OhO"/>
+                            <constraint firstAttribute="centerX" secondItem="sAn-Hi-DAC" secondAttribute="centerX" constant="-0.5" id="bIx-sc-StO"/>
+                            <constraint firstItem="J7H-rl-Qyn" firstAttribute="top" secondItem="PcF-Tl-JNa" secondAttribute="bottom" constant="8" symbolic="YES" id="edy-WU-mNr"/>
+                            <constraint firstItem="sAn-Hi-DAC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="202" id="h6d-rg-B07"/>
+                            <constraint firstItem="VHU-dG-c03" firstAttribute="centerX" secondItem="J7H-rl-Qyn" secondAttribute="centerX" id="i6B-A4-DJx"/>
+                            <constraint firstItem="PcF-Tl-JNa" firstAttribute="top" secondItem="VHU-dG-c03" secondAttribute="bottom" constant="8" symbolic="YES" id="y8l-Eu-WIo"/>
+                            <constraint firstItem="VHU-dG-c03" firstAttribute="centerX" secondItem="PcF-Tl-JNa" secondAttribute="centerX" id="yJg-fz-ns4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4WQ-aj-ZSe"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="countLabel" destination="PcF-Tl-JNa" id="eYu-u4-5zk"/>
+                        <outlet property="titleTextField" destination="VHU-dG-c03" id="I5b-MY-WUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.5" y="405.5"/>
         </scene>
     </scenes>
 </document>
