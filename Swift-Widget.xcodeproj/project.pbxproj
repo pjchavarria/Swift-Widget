@@ -29,6 +29,7 @@
 		DA85A2B219CFC65A004DD26B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85A2B119CFC65A004DD26B /* Counter.swift */; };
 		DABCDF0E19D33A0B0056B1BA /* Swift_Widget.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = DA85A22119CFB63E004DD26B /* Swift_Widget.xcdatamodeld */; };
 		DABCDF0F19D33A780056B1BA /* Swift_Widget.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = DA85A22119CFB63E004DD26B /* Swift_Widget.xcdatamodeld */; };
+		DABCDF1119D3A5EB0056B1BA /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DABCDF1019D3A5EB0056B1BA /* demo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		DA85A2AF19CFC508004DD26B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DA85A2B119CFC65A004DD26B /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		DABC69B019D08E7D00D8E57A /* Swift-Widget-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Widget-Bridging-Header.h"; sourceTree = "<group>"; };
+		DABCDF1019D3A5EB0056B1BA /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 		DA85A21D19CFB63E004DD26B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DABCDF1019D3A5EB0056B1BA /* demo.jpg */,
 				DA85A21E19CFB63E004DD26B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -492,6 +495,7 @@
 				DA397F5419D0AAE0002960D4 /* Counter.swift in Resources */,
 				DA85A22819CFB63E004DD26B /* Main.storyboard in Resources */,
 				DA85A22D19CFB63E004DD26B /* LaunchScreen.xib in Resources */,
+				DABCDF1119D3A5EB0056B1BA /* demo.jpg in Resources */,
 				DA85A22A19CFB63E004DD26B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
