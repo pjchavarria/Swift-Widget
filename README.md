@@ -22,4 +22,4 @@ Paul Chavarria, <a href="http://www.twitter.com/pjchavarria"> @pjchavarria </a>
 
 ## License
 
-Swift-Gif is available under the MIT license. See the LICENSE file for more info.
+Swift-Widget is available under the MIT license. See the LICENSE file for more info.
