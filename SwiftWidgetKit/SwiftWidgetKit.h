@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double SwiftWidgetKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwiftWidgetKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SwiftWidgetKit/PublicHeader.h>
-#import <SwiftWidgetKit/TBCoreDataStoreS2.h>
-#import <SwiftWidgetKit/TBCoreDataStoreS1.h>

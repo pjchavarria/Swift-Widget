@@ -106,7 +106,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
         
         // Save in shared user defaults
-        let sharedDefaults = NSUserDefaults(suiteName: "group.AnyTap.SwiftWidget")
+        let sharedDefaults = NSUserDefaults(suiteName: "group.AnyTap.SwiftWidget")!
         sharedDefaults.setBool(true, forKey: "SwiftWidgetModelChanged")
         sharedDefaults.synchronize()
         
