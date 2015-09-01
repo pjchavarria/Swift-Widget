@@ -31,10 +31,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             if (counter?.last != nil) {
                 // Use existing
-                self.counter = (counter?.last as Counter)
+                self.counter = (counter?.last as! Counter)
             }else{
                 // Create new one
-                self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as Counter)
+                self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
                 self.counter?.name = "Counter 1"
                 self.counter?.count = 0
             }
@@ -72,7 +72,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Fetch data and reflect changes on UI
         let counter = NSManagedObject.findAllInContext("Counter", context: self.context)
-        self.counter = (counter?.last as Counter)
+        self.counter = (counter?.last as! Counter)
         self.fillData()
     }
     

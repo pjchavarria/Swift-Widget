@@ -77,10 +77,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             let counter = NSManagedObject.findAllInContext("Counter", context: self.context)
             
             if (counter?.last != nil) {
-                self.counter = (counter?.last as Counter)
+                self.counter = (counter?.last as! Counter)
             }else{
                 // Create new one
-                self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as Counter)
+                self.counter = (NSEntityDescription.insertNewObjectForEntityForName("Counter", inManagedObjectContext: self.context) as! Counter)
                 self.counter?.name = ""
                 self.counter?.count = 0
             }
